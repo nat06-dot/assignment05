@@ -1,0 +1,23 @@
+import styles from "./card.module.css";
+import Image from "next/image";
+
+interface props{
+    
+}
+
+export default function Card({ venueName, imgSrc }: { venueName:string,imgSrc:string}) {
+    return (
+        <div className={styles.card}>
+            <div className={styles.cardimg}>
+                    <Image src={imgSrc}
+                        alt='product picture'
+                        fill={true}
+                        style={{ objectFit: "cover" }}/>
+                </div>
+            <div className={styles.cardtext}>
+                {venueName}
+            </div>
+            
+        </div>
+    );
+}
