@@ -1,23 +1,26 @@
+
 import styles from "./card.module.css";
 import Image from "next/image";
+import InteractiveCard from "./InteractiveCard"
 
-interface props{
-    
+interface props {
+
 }
 
-export default function Card({ venueName, imgSrc }: { venueName:string,imgSrc:string}) {
+export default function Card({ venueName, imgSrc }: { venueName: string, imgSrc: string }) {
     return (
-        <div className={styles.card}>
-            <div className={styles.cardimg}>
+        <InteractiveCard venueName={venueName}>
+            <div className={`${styles.card} rounded-lg shadow-lg`}>
+                <div className={styles.cardimg}>
                     <Image src={imgSrc}
                         alt='product picture'
                         fill={true}
-                        style={{ objectFit: "cover" }}/>
+                        style={{ objectFit: "cover" }} />
                 </div>
-            <div className={styles.cardtext}>
-                {venueName}
+                <div className={styles.cardtext}>
+                    {venueName}
+                </div>
             </div>
-            
-        </div>
+        </InteractiveCard>
     );
 }

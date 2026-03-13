@@ -6,10 +6,10 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display:flex;
+  display: flex;
   grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
+  flex-direction: column;
+  align-items: stretch;
   min-height: 100svh;
   padding: 0;
   gap: 64px;
