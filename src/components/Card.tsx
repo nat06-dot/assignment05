@@ -10,7 +10,7 @@ interface props {
 export default function Card({ venueName, imgSrc }: { venueName: string, imgSrc: string }) {
     return (
         <InteractiveCard venueName={venueName}>
-            <div className={`${styles.card} rounded-lg shadow-lg`}>
+            <div className={styles.card}>
                 <div className={styles.cardimg}>
                     <Image src={imgSrc}
                         alt='product picture'
